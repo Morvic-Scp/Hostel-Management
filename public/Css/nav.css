@@ -1,0 +1,222 @@
+body{
+    font-family: sans-serif;
+}
+nav{
+    float: center;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    height: 10vh;
+    color: white;
+}
+nav:hover{background-color:rgb(10, 20, 37);
+    box-shadow: 5px 9px 19px black;
+transition: all 0.3s;}
+.nav-links li a{
+    text-decoration: none;
+    color:white;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+.active{
+    
+}
+.nav-links li:hover{
+    border-bottom-style:solid ;
+    cursor: pointer;
+    border-bottom-color: tomato;
+    transition: border-bottom 0.5s;
+}
+
+.back{
+    background-image:url("../res/cover2.svg");
+    background-attachment: fixed;
+	background-repeat:no-repeat;
+	background-position: center-top;
+	background-size: cover;
+    height:700px;
+    width: 100%;
+	margin:0px !important;
+
+}
+.cover{
+    margin-bottom: 2em;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 9px 9px rgb(160, 160, 160);
+    border-radius: 18px;
+    padding: 20px;
+    justify-content: center;
+}
+.box h2{
+    color: #E81701;
+    text-align: left;
+    margin-bottom: 10px;
+    width: fit-content;
+    font-size: 40px;
+    background: linear-gradient(to left, rgb(248, 166, 13), #E81701);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text1{
+    text-align: right;
+    font-size: 18px;
+}
+
+.innerbel{
+    font-family: Dosis;
+    color: white;
+    text-align: center;
+    position: absolute;
+    
+}
+.innerbel h1{
+    font-size: 2.5em;
+    background: linear-gradient(to top, rgb(180, 180, 180), rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.innerbel button{
+    width: 160px;
+    height: 40px;
+    color: white;
+    border-style: solid;
+    border-color: turquoise;
+    border-width: 5px;
+    background: transparent;
+}
+
+.innerbel button:hover{
+    width: 170px;   
+    height: 50px;
+    font-size: 18px;
+    color: turquoise;
+    border-color: white;
+    transition:all ease-in 0.3s ;
+}
+.image {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    height: 300px;
+    margin-left: 12px;
+    margin-right: 12px;
+    box-shadow: 3px 9px 9px rgb(160, 160, 160);
+    width: 45vh;
+    
+}
+.image img{
+    height: 75%;
+}
+
+.image p{
+position: static;
+width: 300px;
+}
+
+.imageG{
+    display: flex;
+    margin: 30px;
+    align-items: center;
+}
+
+.cardbody{
+    margin-bottom: auto;
+    background-color: rgba(251, 255, 251, 0.534);
+    position: static;
+    text-align: center;
+}
+.read{
+    border: none;
+    background-color: rgba(232, 24, 1, 0.678);
+    width: 140px;
+    height: 40px;
+    box-shadow: 3px 9px 9px rgb(160, 160, 160);
+    color: white;
+}
+.apply{
+    display: flex;
+    
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 15px;
+    box-shadow: 3px 9px 9px rgb(160, 160, 160);
+    padding: 15px;
+}
+
+
+
+@media screen and (max-width: 780px){
+    nav{
+        background-color: darkslategray;
+        transition:background-color 0.5s ease-in  ;
+        z-index: 2;
+    }
+
+    .navigation{
+        position: absolute;
+        right: 2em;
+        top: 28px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .line{
+        background-color: white;
+        margin: 5px;
+        width: 23px;
+        height: 3px;
+    }
+    .imageG{
+        flex-direction: column;
+    }
+    .image img{
+        border-radius: 100%;
+    }
+    .image{box-shadow: none;margin-bottom: 30px; justify-items: center;}
+    .text1{text-align: center; font-size: 14px;}
+    .box h2{font-size: 25px;}
+
+    .nav-links{
+        z-index: 1;
+        height: 90vh;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        color: white;
+        background-color: darkslategray;
+        position: absolute;
+        right: 10px;
+        clip-path: circle(60px at 90% -10%);
+        -webkit-clip-path: circle(60px at 90% -10%);
+        transition: all ease-in-out 0.5s;
+    }
+
+    .nav-links.crest{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+    }
+    .apply{flex-direction: column; align-items: center;}
+
+}
